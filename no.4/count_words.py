@@ -25,5 +25,6 @@ def count_word(file_name):
 
 if __name__ == '__main__':
     result = count_word('test.txt')
-    for key,count in result.most_common(3):
+    #most_common打印出现次数最多的单词，这里most_common(3)表示出现次数最多的3个单词
+    for key,count in result.most_common(30):
         print '%s: %d' % (key, count)
