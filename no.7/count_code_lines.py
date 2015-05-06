@@ -15,7 +15,7 @@ def count_code_lines(filename):
     global comment
     f = open(filename)
     lines = f.readlines()
-    total += len(lines)
+    total += len(lines)  #行数
 
     pattern_blank = re.compile(r'^\s*$')
     pattern_comment = re.compile(r'^\s*\#+')

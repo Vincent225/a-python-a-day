@@ -7,7 +7,8 @@ def generate_activation_code(count):
     for i in xrange(count):
         code = str(uuid.uuid4()).replace('-','').upper()
         #uuid4的算法有一定的重复概率，所以下面作了判断
-        if not code in code_list:
+        #if not code in code_list:
+        if code not in code_list:
             code_list.append(code)
 
     return code_list

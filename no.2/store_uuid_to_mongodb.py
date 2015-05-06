@@ -1,4 +1,4 @@
-#usr/bin/python
+#!/usr/bin/python
 #encoding=utf-8
 
 import pymongo
@@ -10,7 +10,7 @@ db = connection.python_study
 #指定collection，不存在即创建
 collection = db.uuid
 
-for i in range(200):
+for i in xrange(200):
     #向指定的collection中插入数据
-    collection.insert({"id": i, "value": uuid.uuid4()})
+    collection.insert({"id": i, "value": str(uuid.uuid4())})
 
